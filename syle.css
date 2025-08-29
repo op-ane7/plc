@@ -1,9 +1,8 @@
-/* Paleta de Cores:
-   Azul-Marinho: #004d9a
-   Amarelo Destaque: #ffc107
-   Cinza Claro: #f0f2f5
-   Texto Escuro: #343a40
-   Branco: #ffffff
+/* Paleta de Cores da PRF:
+   Azul-Marinho: #004d9a (principal)
+   Amarelo:      #ffc107 (destaque)
+   Branco:       #ffffff (texto principal, fundos claros)
+   Cinza:        #f0f2f5 (fundo secundário)
 */
 
 body {
@@ -124,5 +123,4 @@ main {
     font-weight: 400;
 }
 
-/* Adicione esta regra no final do arquivo para importar a fonte */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');j
