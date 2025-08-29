@@ -1,0 +1,105 @@
+/* Paleta de Cores da PRF:
+   Azul-Marinho: #004d9a (principal)
+   Amarelo:      #ffc107 (destaque)
+   Branco:       #ffffff (texto principal, fundos claros)
+   Cinza:        #f8f9fa (fundo secundário)
+*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fundo secundário claro */
+    color: #343a40; /* Texto quase preto */
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(rgba(0, 77, 154, 0.9), rgba(0, 77, 154, 0.9)), url('https://via.placeholder.com/1200x400/004d9a/FFFFFF?text=Imagem+principal+da+PRF') no-repeat center center/cover;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section {
+    background-color: white; /* Fundo branco */
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+    color: #004d9a; /* Títulos em azul-marinho */
+    border-bottom: 3px solid #ffc107; /* Linha de destaque amarela */
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.element-item {
+    background-color: #f1f1f1; /* Fundo cinza claro */
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.element-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.element-item img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+    border: 3px solid #ffc107; /* Borda amarela nos ícones */
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.element-item h3 {
+    color: #004d9a; /* Títulos dos itens em azul-marinho */
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+.quote {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #004d9a; /* Citação em azul */
+    margin-top: 2rem;
+}
+
+.quote cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
