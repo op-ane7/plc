@@ -1,86 +1,15 @@
-/* Estilos CSS do Site */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    /* Linhas alteradas para adicionar a imagem de fundo */
-    background: linear-gradient(rgba(0, 77, 154, 0.8), rgba(0, 77, 154, 0.8)), url('LINK_DA_SUA_IMAGEM_AQUI.jpg');
+    
+    /* Esta é a linha para você colocar o link da sua imagem */
+    background-image: url('https://i.pinimg.com/474x/57/01/9e/57019ea5466cdd42c1758b959dd60cae.jpg');
+    background-color: #004d9a; /* Cor de fundo reserva */
+    
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* A cor do texto principal e o espaçamento continuam iguais */
     color: #ffffff;
     line-height: 1.6;
-}
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 2rem;
-    text-align: center;
-}
-
-.section {
-    background-color: rgba(255, 255, 255, 0.95); /* Fundo semi-transparente branco */
-    color: #343a40; /* Cor do texto em blocos */
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
-}
-
-h2 {
-    font-size: 2rem;
-    color: #004d9a;
-    border-bottom: 3px solid #ffc107; /* Linha de destaque amarela */
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-bottom: 3rem;
-}
-
-.image-container {
-    display: flex;
-    justify-content: space-around;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.image-container img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.image-container img:hover {
-    transform: scale(1.05);
-}
-
-.quote-box {
-    background-color: #f8f9fa;
-    border-left: 5px solid #ffc107;
-    padding: 1.5rem;
-    margin-top: 2rem;
-    font-style: italic;
-}
-
-.quote-box p {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #555;
 }
