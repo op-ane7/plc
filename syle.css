@@ -3,8 +3,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #004d9a; /* Fundo azul-marinho da PRF */
-    color: #ffffff; /* Cor do texto principal */
+    /* Linhas alteradas para adicionar a imagem de fundo */
+    background: linear-gradient(rgba(0, 77, 154, 0.8), rgba(0, 77, 154, 0.8)), url('LINK_DA_SUA_IMAGEM_AQUI.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* A cor do texto principal e o espaçamento continuam iguais */
+    color: #ffffff;
     line-height: 1.6;
 }
 
