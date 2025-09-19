@@ -8,7 +8,6 @@
     <style>
         /* Estilos CSS do Site */
         body {
-            /* A fonte foi alterada para 'Roboto' */
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
@@ -18,6 +17,40 @@
             background-attachment: fixed;
             color: #ffffff;
             line-height: 1.6;
+            scroll-behavior: smooth; /* Para a rolagem suave do menu */
+        }
+        
+        /* Estilos do Menu de Navegação */
+        nav {
+            background-color: #004d9a;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #ffc107;
         }
 
         .container {
@@ -42,7 +75,6 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 1rem;
-            /* Nova linha adicionada para a sombra do texto */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
         }
 
@@ -106,6 +138,17 @@
     </style>
 </head>
 <body>
+    
+    <nav>
+        <ul>
+            <li><a href="#pilares">Pilares</a></li>
+            <li><a href="#funcoes">Funções</a></li>
+            <li><a href="#salario">Salário</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#concurso">Concurso</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
         <h1>Polícia Rodoviária Federal</h1>
@@ -114,7 +157,7 @@
             Garantindo a segurança e a ordem nas rodovias federais do Brasil.
         </p>
 
-        <div class="section">
+        <div class="section" id="pilares">
             <h2>Pilares da Atuação</h2>
             <div class="image-container">
                <img src="https://image.portaldacidade.com/unsafe/https://bucket.portaldacidade.com/paranavai.portaldacidade.com/img/news/2025-04/prf-inicia-operacao-dia-do-trabalho-2025-nas-rodovias-do-parana-68122fe88e04c.jpeg" alt="Imagem de um veículo da PRF">
@@ -126,7 +169,7 @@
             </p>
         </div>
 
-        <div class="section">
+        <div class="section" id="funcoes">
             <h2>Principais Funções</h2>
             <div class="text-list">
                 <ul>
@@ -138,7 +181,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" id="salario">
             <h2>Salário e Benefícios</h2>
             <div class="info-box">
                 <p>O salário de um Policial Rodoviário Federal é um dos mais competitivos no serviço público. A remuneração inicial pode ultrapassar **R$ 12.000,00**, e esse valor pode aumentar com a progressão na carreira. Além do salário, a PRF oferece uma série de benefícios, como:</p>
@@ -159,7 +202,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" id="tecnologia">
             <h2>Tecnologia e Equipamentos</h2>
             <div class="info-box">
                 <p>Para garantir a segurança nas rodovias, a PRF utiliza tecnologia de ponta. Os equipamentos incluem:</p>
@@ -172,7 +215,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" id="galeria">
             <h2>Galeria de Fotos</h2>
             <div class="image-container">
                 <img src="https://www.gov.br/prf/pt-br/noticias/estaduais/parana/2023/outubro/prf-apreende-arsenal-e-toneladas-de-drogas-na-regiao-da-triplice-fronteira/whatsapp-image-2023-10-16-at-13-12-39-1.jpeg/@@images/397084d9-a6be-4ed9-b037-11d105451246.jpeg" alt="Imagem de uma operação da PRF">
@@ -187,6 +230,38 @@
             </div>
         </div>
 
+        <div class="section" id="concurso">
+            <h2>Concurso para a PRF</h2>
+            <div class="info-box">
+                <p>O ingresso na Polícia Rodoviária Federal se dá por meio de **concurso público**, um dos mais concorridos do país. Para se tornar um PRF, é necessário passar por diversas etapas de seleção, que testam tanto o conhecimento quanto a aptidão física e psicológica do candidato.</p>
+                
+                <h3>Requisitos Básicos</h3>
+                <div class="text-list">
+                    <ul>
+                        <li>Ser brasileiro.</li>
+                        <li>Ter idade mínima de 18 anos.</li>
+                        <li>Ter nível superior em qualquer área de formação.</li>
+                        <li>Possuir Carteira Nacional de Habilitação (CNH), categoria B ou superior, válida.</li>
+                    </ul>
+                </div>
+
+                <h3>Etapas do Concurso</h3>
+                <div class="text-list">
+                    <p>O processo seletivo geralmente inclui:</p>
+                    <ul>
+                        <li>**Prova Objetiva e Discursiva:** Avalia o conhecimento em matérias como português, matemática, direito e legislação de trânsito.</li>
+                        <li>**Exame de Aptidão Física (TAF):** Testes de força, agilidade e resistência física.</li>
+                        <li>**Avaliação Psicológica e de Saúde:** Para verificar a capacidade do candidato para lidar com a pressão da profissão.</li>
+                        <li>**Investigação Social:** Análise da vida pregressa do candidato.</li>
+                        <li>**Curso de Formação Profissional:** Etapa final de treinamento intensivo, onde o candidato se aprofunda nas atividades da PRF.</li>
+                    </ul>
+                </div>
+                
+                <h3>Preparação</h3>
+                <p>A preparação para o concurso exige dedicação. É fundamental estudar o conteúdo teórico com antecedência e manter uma rotina de exercícios físicos para ter um bom desempenho em todas as etapas.</p>
+            </div>
+        </div>
+
         <div class="section">
             <h2>O Lado Humano da Atuação</h2>
             <p>
@@ -197,7 +272,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" id="contato">
             <h2>Entre em Contato</h2>
             <div class="info-box">
                 <p>Preencha o formulário abaixo para entrar em contato com a PRF.</p>
