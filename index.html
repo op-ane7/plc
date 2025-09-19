@@ -17,7 +17,7 @@
             background-attachment: fixed;
             color: #ffffff;
             line-height: 1.6;
-            scroll-behavior: smooth; /* Para a rolagem suave do menu */
+            scroll-behavior: smooth;
         }
         
         /* Estilos do Menu de Navegação */
@@ -135,6 +135,28 @@
         .info-box {
             text-align: left;
         }
+
+        /* ----- NOVA SEÇÃO: Responsividade ----- */
+        /* Estilo para telas pequenas (smartphones) */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -227,38 +249,6 @@
                 <img src="https://www.infomoney.com.br/wp-content/uploads/2024/11/prf.jpg?quality=50&strip=all" alt="Imagem de uma operação da PRF">
                 <img src="https://www.guaira.pr.gov.br/fotos/b62137f0-f71a-4e50-a6c1-2dc535819e2f_DSC02419.jpg" alt="Imagem de uma operação da PRF">
                 <img src="https://www.gov.br/prf/pt-br/noticias/estaduais/mato-grosso-do-sul/2025/setembro/prf-apreende-295-kg-de-drogas-e-armas-em-miranda-ms/prf-apreende-295-kg-de-drogas-e-armas-em-miranda-ms.jpg/@@images/dc55b910-c776-4b7c-9bfa-256980655e78.jpeg" alt="Imagem de uma operação da PRF">
-            </div>
-        </div>
-
-        <div class="section" id="concurso">
-            <h2>Concurso para a PRF</h2>
-            <div class="info-box">
-                <p>O ingresso na Polícia Rodoviária Federal se dá por meio de **concurso público**, um dos mais concorridos do país. Para se tornar um PRF, é necessário passar por diversas etapas de seleção, que testam tanto o conhecimento quanto a aptidão física e psicológica do candidato.</p>
-                
-                <h3>Requisitos Básicos</h3>
-                <div class="text-list">
-                    <ul>
-                        <li>Ser brasileiro.</li>
-                        <li>Ter idade mínima de 18 anos.</li>
-                        <li>Ter nível superior em qualquer área de formação.</li>
-                        <li>Possuir Carteira Nacional de Habilitação (CNH), categoria B ou superior, válida.</li>
-                    </ul>
-                </div>
-
-                <h3>Etapas do Concurso</h3>
-                <div class="text-list">
-                    <p>O processo seletivo geralmente inclui:</p>
-                    <ul>
-                        <li>**Prova Objetiva e Discursiva:** Avalia o conhecimento em matérias como português, matemática, direito e legislação de trânsito.</li>
-                        <li>**Exame de Aptidão Física (TAF):** Testes de força, agilidade e resistência física.</li>
-                        <li>**Avaliação Psicológica e de Saúde:** Para verificar a capacidade do candidato para lidar com a pressão da profissão.</li>
-                        <li>**Investigação Social:** Análise da vida pregressa do candidato.</li>
-                        <li>**Curso de Formação Profissional:** Etapa final de treinamento intensivo, onde o candidato se aprofunda nas atividades da PRF.</li>
-                    </ul>
-                </div>
-                
-                <h3>Preparação</h3>
-                <p>A preparação para o concurso exige dedicação. É fundamental estudar o conteúdo teórico com antecedência e manter uma rotina de exercícios físicos para ter um bom desempenho em todas as etapas.</p>
             </div>
         </div>
 
