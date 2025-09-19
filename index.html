@@ -36,20 +36,19 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem; /* Espaço ajustado para caber os novos links */
         }
         
         nav a {
             color: #ffffff;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 0.9rem; /* Tamanho ajustado para caber os novos links */
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: color 0.3s ease;
         }
         
-        /* Animação de hover no menu */
         nav a:hover {
             color: #ffc107;
         }
@@ -88,9 +87,18 @@
             transition: color 0.3s ease;
         }
 
-        /* Animação de hover no h2 */
         h2:hover {
             color: #ffc107;
+        }
+        
+        .faq-item {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            margin-bottom: 0.5rem;
         }
 
         .subtitle {
@@ -180,9 +188,9 @@
             background-color: #003a7a;
         }
 
-        /* ----- NOVA SEÇÃO: Estilo do Botão "Voltar ao Topo" ----- */
+        /* Estilo do Botão "Voltar ao Topo" */
         #back-to-top-btn {
-            display: none; /* Esconde o botão por padrão */
+            display: none;
             position: fixed;
             bottom: 20px;
             right: 30px;
@@ -232,6 +240,8 @@
             <li><a href="#pilares">Pilares</a></li>
             <li><a href="#funcoes">Funções</a></li>
             <li><a href="#salario">Salário</a></li>
+            <li><a href="#duvidas">Dúvidas</a></li>
+            <li><a href="#faculdades">Faculdades</a></li>
             <li><a href="#galeria">Galeria</a></li>
             <li><a href="#concurso">Concurso</a></li>
             <li><a href="#contato">Contato</a></li>
@@ -263,7 +273,7 @@
                 <ul>
                     <li><strong>Fiscalização e Segurança Viária:</strong> Garantir que as leis de trânsito sejam cumpridas, reduzindo acidentes e salvando vidas.</li>
                     <li><strong>Combate ao Crime:</strong> Atuar na repressão de crimes como tráfico de drogas, contrabando, e roubo de cargas.</li>
-                    <li><strong>Atendimento a Acidentes:</strong> Prestar socorro imediato, coordenar o fluxo do trânsito em emergências e garantir a segurança das vítimas.</li>
+                    <li><li><strong>Atendimento a Acidentes:</strong> Prestar socorro imediato, coordenar o fluxo do trânsito em emergências e garantir a segurança das vítimas.</li>
                     <li><strong>Educação para o Trânsito:</strong> Realizar campanhas educativas para conscientizar motoristas e pedestres sobre a importância de um trânsito seguro.</li>
                 </ul>
             </div>
@@ -282,11 +292,35 @@
             </div>
         </div>
 
-        <div class="section">
-            <h2>Rotina e Desafios</h2>
+        <div class="section" id="duvidas">
+            <h2>Dúvidas Frequentes</h2>
+            <div class="faq-item">
+                <strong>Preciso ter uma idade mínima para ser um PRF?</strong>
+                <p>Sim. É preciso ter no mínimo 18 anos de idade para se candidatar ao concurso.</p>
+            </div>
+            <div class="faq-item">
+                <strong>O salário é o mesmo em todo o país?</strong>
+                <p>O salário-base é o mesmo em todo o território nacional, mas pode haver adicionais dependendo da localidade e do tipo de serviço.</p>
+            </div>
+            <div class="faq-item">
+                <strong>O concurso é muito difícil?</strong>
+                <p>O concurso da PRF é considerado um dos mais concorridos do Brasil, exigindo preparação intensa e dedicação nos estudos e nos treinamentos físicos.</p>
+            </div>
+        </div>
+
+        <div class="section" id="faculdades">
+            <h2>Faculdades Necessárias</h2>
             <div class="info-box">
-                <p>A rotina de um PRF é dinâmica e imprevisível. O trabalho é em turnos, e o policial pode ser escalado para atuar em diferentes áreas, desde a patrulha rodoviária até operações especiais. O principal desafio é lidar com situações de alto risco, como perseguições e abordagens a criminosos, mantendo a calma e a segurança.</p>
-                <p>Apesar das dificuldades, a sensação de dever cumprido ao ajudar uma vítima de acidente ou tirar um criminoso de circulação é uma das maiores recompensas da profissão.</p>
+                <p>Para se tornar um Policial Rodoviário Federal, é obrigatório ter um **diploma de nível superior** em qualquer área de formação, reconhecido pelo Ministério da Educação (MEC).</p>
+                <p>Não há uma faculdade específica que garanta a vaga, mas algumas áreas podem oferecer uma base de conhecimento útil para a carreira, como:</p>
+                <ul>
+                    <li>Direito</li>
+                    <li>Segurança Pública</li>
+                    <li>Educação Física</li>
+                    <li>Administração</li>
+                    <li>Engenharia</li>
+                </ul>
+                <p>O mais importante é ter um diploma de qualquer curso superior para cumprir o requisito.</p>
             </div>
         </div>
 
@@ -325,6 +359,38 @@
             </p>
             <div class="quote-box">
                 <p>“Não é apenas a lei que defendemos, mas as pessoas que a lei protege. Cada vida importa.”</p>
+            </div>
+        </div>
+
+        <div class="section" id="concurso">
+            <h2>Concurso para a PRF</h2>
+            <div class="info-box">
+                <p>O ingresso na Polícia Rodoviária Federal se dá por meio de **concurso público**, um dos mais concorridos do país. Para se tornar um PRF, é necessário passar por diversas etapas de seleção, que testam tanto o conhecimento quanto a aptidão física e psicológica do candidato.</p>
+                
+                <h3>Requisitos Básicos</h3>
+                <div class="text-list">
+                    <ul>
+                        <li>Ser brasileiro.</li>
+                        <li>Ter idade mínima de 18 anos.</li>
+                        <li>Ter nível superior em qualquer área de formação.</li>
+                        <li>Possuir Carteira Nacional de Habilitação (CNH), categoria B ou superior, válida.</li>
+                    </ul>
+                </div>
+
+                <h3>Etapas do Concurso</h3>
+                <div class="text-list">
+                    <p>O processo seletivo geralmente inclui:</p>
+                    <ul>
+                        <li>**Prova Objetiva e Discursiva:** Avalia o conhecimento em matérias como português, matemática, direito e legislação de trânsito.</li>
+                        <li>**Exame de Aptidão Física (TAF):** Testes de força, agilidade e resistência física.</li>
+                        <li>**Avaliação Psicológica e de Saúde:** Para verificar a capacidade do candidato para lidar com a pressão da profissão.</li>
+                        <li>**Investigação Social:** Análise da vida pregressa do candidato.</li>
+                        <li>**Curso de Formação Profissional:** Etapa final de treinamento intensivo, onde o candidato se aprofunda nas atividades da PRF.</li>
+                    </ul>
+                </div>
+                
+                <h3>Preparação</h3>
+                <p>A preparação para o concurso exige dedicação. É fundamental estudar o conteúdo teórico com antecedência e manter uma rotina de exercícios físicos para ter um bom desempenho em todas as etapas.</p>
             </div>
         </div>
 
