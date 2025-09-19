@@ -180,6 +180,29 @@
             background-color: #003a7a;
         }
 
+        /* ----- NOVA SEÇÃO: Estilo do Botão "Voltar ao Topo" ----- */
+        #back-to-top-btn {
+            display: none; /* Esconde o botão por padrão */
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #004d9a;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, opacity 0.3s;
+        }
+        
+        #back-to-top-btn:hover {
+            background-color: #ffc107;
+        }
+
         /* Responsividade */
         @media (max-width: 768px) {
             .container {
@@ -323,10 +346,26 @@
         
     </div>
 
+    <a href="#" id="back-to-top-btn" title="Voltar ao Topo">^</a>
+
     <footer>
         <p>&copy; 2025 Polícia Rodoviária Federal. Todos os direitos reservados.</p>
         <p>Desenvolvido com o objetivo de estudo.</p>
     </footer>
+
+    <script>
+        // Pega o botão
+        let mybutton = document.getElementById("back-to-top-btn");
+
+        // Quando o usuário rola a página 20px para baixo, o botão aparece
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+    </script>
 
 </body>
 </html>
