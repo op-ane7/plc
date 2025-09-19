@@ -36,14 +36,15 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 1.5rem; /* Espaço ajustado para caber os novos links */
+            gap: 1.5rem;
+            flex-wrap: wrap;
         }
         
         nav a {
             color: #ffffff;
             text-decoration: none;
             font-weight: bold;
-            font-size: 0.9rem; /* Tamanho ajustado para caber os novos links */
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: color 0.3s ease;
@@ -107,27 +108,11 @@
             margin-bottom: 3rem;
         }
 
+        /* Removendo a antiga galeria para usar o carrossel */
         .image-container {
-            display: flex;
-            justify-content: space-around;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
+            display: none;
         }
         
-        .image-container img {
-            width: 100%;
-            max-width: 250px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .image-container img:hover {
-            transform: scale(1.05);
-        }
-
         .quote-box {
             background-color: #f8f9fa;
             border-left: 5px solid #ffc107;
@@ -211,6 +196,83 @@
             background-color: #ffc107;
         }
 
+        /* ----- NOVO: Estilo do Carrossel ----- */
+        .carousel-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-slide {
+            display: none; /* Esconde todas as imagens por padrão */
+            width: 100%;
+        }
+        
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Estilo das setas de navegação */
+        .carousel-prev, .carousel-next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .carousel-next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .carousel-prev:hover, .carousel-next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* ----- NOVO: Estilo dos Botões de Compartilhar ----- */
+        .social-share {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .social-btn {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .whatsapp-btn {
+            background-color: #25d366;
+        }
+
+        .facebook-btn {
+            background-color: #3b5998;
+        }
+        
         /* Responsividade */
         @media (max-width: 768px) {
             .container {
@@ -220,15 +282,10 @@
             h1 {
                 font-size: 2.5rem;
             }
-
-            .image-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
+            
             nav ul {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0.5rem;
             }
         }
     </style>
@@ -242,6 +299,7 @@
             <li><a href="#salario">Salário</a></li>
             <li><a href="#duvidas">Dúvidas</a></li>
             <li><a href="#faculdades">Faculdades</a></li>
+            <li><a href="#video">Vídeo</a></li>
             <li><a href="#galeria">Galeria</a></li>
             <li><a href="#concurso">Concurso</a></li>
             <li><a href="#contato">Contato</a></li>
@@ -273,7 +331,7 @@
                 <ul>
                     <li><strong>Fiscalização e Segurança Viária:</strong> Garantir que as leis de trânsito sejam cumpridas, reduzindo acidentes e salvando vidas.</li>
                     <li><strong>Combate ao Crime:</strong> Atuar na repressão de crimes como tráfico de drogas, contrabando, e roubo de cargas.</li>
-                    <li><li><strong>Atendimento a Acidentes:</strong> Prestar socorro imediato, coordenar o fluxo do trânsito em emergências e garantir a segurança das vítimas.</li>
+                    <li><strong>Atendimento a Acidentes:</strong> Prestar socorro imediato, coordenar o fluxo do trânsito em emergências e garantir a segurança das vítimas.</li>
                     <li><strong>Educação para o Trânsito:</strong> Realizar campanhas educativas para conscientizar motoristas e pedestres sobre a importância de um trânsito seguro.</li>
                 </ul>
             </div>
@@ -324,34 +382,40 @@
             </div>
         </div>
 
-        <div class="section" id="tecnologia">
-            <h2>Tecnologia e Equipamentos</h2>
-            <div class="info-box">
-                <p>Para garantir a segurança nas rodovias, a PRF utiliza tecnologia de ponta. Os equipamentos incluem:</p>
-                <ul>
-                    <li>**Viaturas e Motocicletas de Alta Performance:** Para patrulhamento e perseguições.</li>
-                    <li>**Radares e Bafômetros:** Para fiscalização de velocidade e consumo de álcool.</li>
-                    <li>**Drones e Helicópteros:** Para monitoramento aéreo, buscas e resgates.</li>
-                    <li>**Sistemas de Comunicação:** Que permitem a troca de informações em tempo real entre as equipes.</li>
-                </ul>
+        <div class="section" id="video">
+            <h2>Vídeo Institucional</h2>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/j4K5q6a-mR0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="section" id="galeria">
             <h2>Galeria de Fotos</h2>
-            <div class="image-container">
-                <img src="https://www.gov.br/prf/pt-br/noticias/estaduais/parana/2023/outubro/prf-apreende-arsenal-e-toneladas-de-drogas-na-regiao-da-triplice-fronteira/whatsapp-image-2023-10-16-at-13-12-39-1.jpeg/@@images/397084d9-a6be-4ed9-b037-11d105451246.jpeg" alt="Imagem de uma operação da PRF">
-                <img src="https://www.clicportela.com.br/images/noticias/124068/d22b1d7ed15b55ce11246b2018f46538.webp" alt="Imagem de uma operação da PRF">
-                <img src="https://aventurasnahistoria.com.br/wp-content/uploads/hard_news/bili_prf_aposentadoria.jpeg" alt="Imagem de uma operação da PRF">
-            </div>
-
-            <div class="image-container">
-                <img src="https://www.infomoney.com.br/wp-content/uploads/2024/11/prf.jpg?quality=50&strip=all" alt="Imagem de uma operação da PRF">
-                <img src="https://www.guaira.pr.gov.br/fotos/b62137f0-f71a-4e50-a6c1-2dc535819e2f_DSC02419.jpg" alt="Imagem de uma operação da PRF">
-                <img src="https://www.gov.br/prf/pt-br/noticias/estaduais/mato-grosso-do-sul/2025/setembro/prf-apreende-295-kg-de-drogas-e-armas-em-miranda-ms/prf-apreende-295-kg-de-drogas-e-armas-em-miranda-ms.jpg/@@images/dc55b910-c776-4b7c-9bfa-256980655e78.jpeg" alt="Imagem de uma operação da PRF">
+            <div class="carousel-container">
+                <div class="carousel-slide fade">
+                    <img src="https://www.gov.br/prf/pt-br/noticias/estaduais/parana/2023/outubro/prf-apreende-arsenal-e-toneladas-de-drogas-na-regiao-da-triplice-fronteira/whatsapp-image-2023-10-16-at-13-12-39-1.jpeg/@@images/397084d9-a6be-4ed9-b037-11d105451246.jpeg" alt="Imagem 1 de uma operação da PRF">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="https://www.clicportela.com.br/images/noticias/124068/d22b1d7ed15b55ce11246b2018f46538.webp" alt="Imagem 2 de uma operação da PRF">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="https://aventurasnahistoria.com.br/wp-content/uploads/hard_news/bili_prf_aposentadoria.jpeg" alt="Imagem 3 de uma operação da PRF">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="https://www.infomoney.com.br/wp-content/uploads/2024/11/prf.jpg?quality=50&strip=all" alt="Imagem 4 de uma operação da PRF">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="https://www.guaira.pr.gov.br/fotos/b62137f0-f71a-4e50-a6c1-2dc535819e2f_DSC02419.jpg" alt="Imagem 5 de uma operação da PRF">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="https://www.gov.br/prf/pt-br/noticias/estaduais/mato-grosso-do-sul/2025/setembro/prf-apreende-295-kg-de-drogas-e-armas-em-miranda-ms/prf-apreende-295-kg-de-drogas-e-armas-em-miranda-ms.jpg/@@images/dc55b910-c776-4b7c-9bfa-256980655e78.jpeg" alt="Imagem 6 de uma operação da PRF">
+                </div>
+                
+                <a class="carousel-prev">&#10094;</a>
+                <a class="carousel-next">&#10095;</a>
             </div>
         </div>
-
+        
         <div class="section">
             <h2>O Lado Humano da Atuação</h2>
             <p>
@@ -408,6 +472,15 @@
                     <input type="submit" value="Enviar">
                 </form>
             </div>
+            
+            <div class="social-share">
+                <a href="https://api.whatsapp.com/send?text=Confira este site sobre a Polícia Rodoviária Federal: [URL_DO_SEU_SITE]" class="social-btn whatsapp-btn" target="_blank">
+                    WhatsApp
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=[URL_DO_SEU_SITE]" class="social-btn facebook-btn" target="_blank">
+                    Facebook
+                </a>
+            </div>
         </div>
         
     </div>
@@ -420,10 +493,9 @@
     </footer>
 
     <script>
-        // Pega o botão
+        // Script do botão "Voltar ao Topo"
         let mybutton = document.getElementById("back-to-top-btn");
 
-        // Quando o usuário rola a página 20px para baixo, o botão aparece
         window.onscroll = function() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
@@ -431,7 +503,30 @@
                 mybutton.style.display = "none";
             }
         };
+
+        // ----- NOVO: Script do Carrossel de Fotos -----
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("carousel-slide");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slides[slideIndex-1].style.display = "block";  
+        }
+
+        // Ativa as setas do carrossel
+        document.querySelector('.carousel-prev').addEventListener('click', () => plusSlides(-1));
+        document.querySelector('.carousel-next').addEventListener('click', () => plusSlides(1));
     </script>
 
 </body>
-</html>
+</html>y6
